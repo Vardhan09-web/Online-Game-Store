@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 
-const API = 'https://gamestore-server-g91e.onrender.com'
+const API = 'http://localhost:5000'
 
 //Games Endpoints
 const getGames = () => axios.get(`${API}/games/all`)
