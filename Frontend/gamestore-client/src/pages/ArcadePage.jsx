@@ -89,34 +89,7 @@ const arcadeGames = [
     demoLink: '/demo/sega-rally',
     image: 'https://images.unsplash.com/photo-1515805671658-1c5ac2fb3a15?auto=format&fit=crop&w=500&q=80',
   },
-  {
-    id: 13,
-    title: 'Metal Slug',
-    description: 'Enjoy run-and-gun action in this thrilling side-scrolling game.',
-    demoLink: '/demo/metal-slug',
-    image: 'https://images.unsplash.com/photo-1574611595560-bd5f750aba92?auto=format&fit=crop&w=500&q=80',
-  },
-  {
-    id: 14,
-    title: 'Cruis\'n USA',
-    description: 'Drive through scenic locations with high-speed arcade-style gameplay.',
-    demoLink: '/demo/cruisn-usa',
-    image: 'https://images.unsplash.com/photo-1516409145265-d3f918be68e0?auto=format&fit=crop&w=500&q=80',
-  },
-  {
-    id: 15,
-    title: 'Mortal Kombat',
-    description: 'Engage in brutal combat with iconic characters and finishing moves.',
-    demoLink: '/demo/mortal-kombat',
-    image: 'https://images.unsplash.com/photo-1602354870425-24d27c7d1f19?auto=format&fit=crop&w=500&q=80',
-  },
-  {
-    id: 16,
-    title: 'Asteroids',
-    description: 'Destroy asteroids while avoiding collisions in this space shooter.',
-    demoLink: '/demo/asteroids',
-    image: 'https://images.unsplash.com/photo-1581533940080-870cf53f5a38?auto=format&fit=crop&w=500&q=80',
-  },
+ 
 ];
 
 
