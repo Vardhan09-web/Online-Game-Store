@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GameCarousel from '../components/GameCarousel'; // Import the GameCarousel component
+import CategoryMenu from '../components/CategoryMenu';
 
 // Define a list of featured Action games
 const actionGames = [
@@ -123,8 +124,10 @@ export default function ActionPage() {
   return (
     <div className="min-h-screen bg-gray-900">
       <main>
+      
         {/* Game Carousel specific to the Action category */}
         <GameCarousel category="Action" />
+        <CategoryMenu />
 
         {/* Show More Button */}
         <div className="text-center my-6">

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import GameCarousel from '../components/GameCarousel';
 import GameGrid from '../components/GameGrid';
+import CategoryMenu from '../components/CategoryMenu';
 
 const shootingGames = [
   {
@@ -124,6 +125,7 @@ export default function ShootingPage() {
     <div className="min-h-screen bg-gray-900">
       <main>
         <GameCarousel category="Shooting" />
+        <CategoryMenu />
 
         <div className="text-center my-6">
           <Link to="/shooting" className="text-blue-400 hover:text-blue-300 transition">

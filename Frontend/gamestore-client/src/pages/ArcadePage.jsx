@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import GameCarousel from '../components/GameCarousel'; // Assuming this is the carousel component
 import GameGrid from '../components/GameGrid'; // Assuming this is the game grid component
+import CategoryMenu from '../components/CategoryMenu';
 
 const arcadeGames = [
   {
@@ -125,6 +126,7 @@ export default function ArcadePage() {
       <main>
         {/* Game Carousel for Arcade Category */}
         <GameCarousel category="Arcade" />
+        <CategoryMenu />
 
         {/* Show More Button */}
         <div className="text-center my-6">

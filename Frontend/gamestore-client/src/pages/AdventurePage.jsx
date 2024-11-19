@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GameCarousel from '../components/GameCarousel';
-
+import CategoryMenu from '../components/CategoryMenu';
 const adventureGames = [
     {
       id: 1,
@@ -123,6 +123,7 @@ export default function AdventurePage() {
     <div className="min-h-screen bg-gray-900">
       <main>
         <GameCarousel category="Adventure" />
+        <CategoryMenu />
 
         <div className="text-center my-6">
           <Link to="/adventure" className="text-blue-400 hover:text-blue-300 transition">

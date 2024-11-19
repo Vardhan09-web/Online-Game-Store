@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import GameCarousel from '../components/GameCarousel';
+import CategoryMenu from '../components/CategoryMenu';
 
 const multiplayerGames = [
   {
@@ -123,6 +124,7 @@ export default function MultiplayerPage() {
     <div className="min-h-screen bg-gray-900">
       <main>
         <GameCarousel category="Multiplayer" />
+        <CategoryMenu />
 
         <div className="text-center my-6">
           <Link to="/multiplayer" className="text-blue-400 hover:text-blue-300 transition">

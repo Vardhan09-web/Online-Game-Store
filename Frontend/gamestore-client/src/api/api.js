@@ -10,6 +10,7 @@ const getGames = () => axios.get(`${API}/games/all`)
 const addGame = (game) =>axios.post(`${API}/games/addgame`, game)
 const editGame = (game, id) => axios.put(`${API}/games/edit/${id}`, game)
 const deleteGame= (id) => axios.delete(`${API}/games/delete/${id}`)
+const search = (query) => axios.get(`${API}/search?q=${query}`);
 
 
 //Orders Endpoints
@@ -73,5 +74,6 @@ export {
   getReviewsByGame, 
   addReview, 
   editReview, 
-  deleteReview 
+  deleteReview ,
+  search
 };

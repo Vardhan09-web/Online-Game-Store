@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import GameCarousel from './components/GameCarousel';
 import CategoryMenu from './components/CategoryMenu';
@@ -21,6 +21,53 @@ import ActionPage from './pages/ActionPage';
 import AdminUsers from './pages/AdminUsers';
 import AddNewGame from './pages/Addnewgame';
 
+function Layout() {
+  const location = useLocation();
+
+  // Define paths where the Navbar should be hidden
+  const hideNavbarRoutes = ['/', '/admin'];
+
+  return (
+    <>
+      {/* Conditionally render Navbar */}
+      {!hideNavbarRoutes.includes(location.pathname) && <Navbar />}
+      <Routes>
+        {/* Home Route */}
+        <Route path="/home" element={
+          <main>
+            <GameCarousel />
+            <CategoryMenu />
+            <GameGrid />
+          </main>
+        } />
+
+        {/* Login Route */}
+        <Route path="/" element={<LoginPage />} />
+
+        {/* Admin Dashboard */}
+        <Route path="/admin" element={<AdminDashboard />} />
+
+        {/* Other Pages */}
+        <Route path="/arcade" element={<ArcadePage />} />
+        <Route path="/shooting" element={<ShootingPage />} />
+        <Route path="/racing" element={<RacingPage />} />
+        <Route path="/sports" element={<SportsPage />} />
+        <Route path="/puzzle" element={<PuzzlePage />} />
+        <Route path="/multiplayer" element={<MultiplayerPage />} />
+        <Route path="/adventure" element={<AdventurePage />} />
+        <Route path="/action" element={<ActionPage />} />
+        <Route path="/admin/users" element={<AdminUsers />} />
+        <Route path="/admin/addnewgame" element={<AddNewGame />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/library" element={<Library />} />
+        <Route path="/community" element={<Community />} />
+
+        {/* Catch-All Route */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
+  );
+}
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(() => localStorage.getItem('isAdmin') === 'true');
@@ -42,45 +89,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-900">
-        <Navbar />
-        <Routes>
-          {/* Home Route */}
-          <Route path="/home" element={
-            <main>
-              <GameCarousel />
-              <CategoryMenu />
-              <GameGrid />
-            </main>} />
-
-          {/* Login Route */}
-          <Route path="/" element={<LoginPage />} />
-
-          {/* Admin Dashboard */}
-          <Route path="/admin"
-            element={<AdminDashboard />} />
-
-          {/* Arcade Page */}
-          <Route path="/arcade" element={<ArcadePage />} />
-          <Route path="/shooting" element={<ShootingPage />} />
-          <Route path="/racing" element={<RacingPage />} />
-          <Route path="/sports" element={<SportsPage />} />
-          <Route path="/puzzle" element={<PuzzlePage />} />
-          <Route path="/multiplayer" element={<MultiplayerPage />} />
-          <Route path="/adventure" element={<AdventurePage />} />
-         <Route path="/action" element={<ActionPage />} />
-         <Route path="/admin/users" element={<AdminUsers />} />
-         <Route path="/admin/addnewgame" element={<AddNewGame />} />
-
-
-         
-        <Route path="/store" element={<Store />} />
-        <Route path="/library" element={<Library />} />
-        <Route path="/community" element={<Community />} />
-
-          {/* Catch-All Route */}
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-
+        <Layout />
         {/* Footer */}
         <footer className="bg-gray-800 text-gray-400 py-8">
           <div className="max-w-7xl mx-auto px-6 text-center">
