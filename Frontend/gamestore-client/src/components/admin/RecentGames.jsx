@@ -6,24 +6,24 @@ const recentGames = [
     id: 1,
     title: 'Cyber Odyssey 2077',
     status: 'Active',
-    sales: 1234,
-    revenue: '$12,340',
+    sales: "-",
+    revenue: '-',
     image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=100&q=80'
   },
   {
     id: 2,
     title: 'Stellar Warriors',
     status: 'Active',
-    sales: 856,
-    revenue: '$8,560',
+    sales: "-",
+    revenue: '-',
     image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=100&q=80'
   },
   {
     id: 3,
     title: 'Ancient Legends',
     status: 'Maintenance',
-    sales: 654,
-    revenue: '$6,540',
+    sales: "-",
+    revenue: '-',
     image: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=100&q=80'
   }
 ];

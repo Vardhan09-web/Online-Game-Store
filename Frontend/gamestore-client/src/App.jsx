@@ -21,6 +21,7 @@ import ActionPage from './pages/ActionPage';
 import AdminUsers from './pages/AdminUsers';
 import AddNewGame from './pages/Addnewgame';
 
+
 function Layout() {
   const location = useLocation();
 
@@ -61,6 +62,7 @@ function Layout() {
         <Route path="/store" element={<Store />} />
         <Route path="/library" element={<Library />} />
         <Route path="/community" element={<Community />} />
+        
 
         {/* Catch-All Route */}
         <Route path="*" element={<Navigate to="/" replace />} />
