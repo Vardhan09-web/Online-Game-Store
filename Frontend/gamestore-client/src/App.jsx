@@ -19,7 +19,7 @@ import MultiplayerPage from './pages/MultiplayerPage';
 import AdventurePage from './pages/AdventurePage';
 import ActionPage from './pages/ActionPage';
 import AdminUsers from './pages/AdminUsers';
-import AddNewGame from './pages/Addnewgame';
+import AddNewGame from './pages/AddNewGame';
 
 
 function Layout() {
