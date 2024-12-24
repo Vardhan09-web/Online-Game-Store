@@ -120,13 +120,13 @@ const AddNewGame = () => {
                   ref={titleRef}
                   type="text"
                   placeholder="Game Title"
-                  className="w-full p-4 border-b-2 border-gray-300 focus:border-green-500 text-white"
+                  className="w-full p-4 border-b-2 border-gray-300 focus:border-green-500 text-black"
                   required
                 />
                 <textarea
                   ref={descriptionRef}
                   placeholder="Description"
-                  className="w-full p-4 border-b-2 border-gray-300 focus:border-green-500 text-white"
+                  className="w-full p-4 border-b-2 border-gray-300 focus:border-green-500 text-black"
                   rows="4"
                   required
                 />
@@ -134,7 +134,7 @@ const AddNewGame = () => {
                 {/* Category Dropdown */}
                 <select
                   ref={categoryRef}  // Reference for category dropdown
-                  className="w-full p-4 border-b-2 border-gray-300 focus:border-green-500 text-white"
+                  className="w-full p-4 border-b-2 border-gray-300 focus:border-green-500 text-black"
                   required
                 >
                   <option value="">Select Category</option>
@@ -152,21 +152,21 @@ const AddNewGame = () => {
                   ref={releaseDateRef}
                   type="date"
                   placeholder="Release Date"
-                  className="w-full p-4 border-b-2 border-gray-300 focus:border-green-500 text-white"
+                  className="w-full p-4 border-b-2 border-gray-300 focus:border-green-500 text-black"
                   required
                 />
                 <input
                   ref={imgUrlRef}
                   type="text"
                   placeholder="Image URL"
-                  className="w-full p-4 border-b-2 border-gray-300 focus:border-green-500 text-white"
+                  className="w-full p-4 border-b-2 border-gray-300 focus:border-green-500 text-black"
                   required
                 />
                 <input
                   ref={priceRef}
                   type="number"
                   placeholder="Price"
-                  className="w-full p-4 border-b-2 border-gray-300 focus:border-green-500 text-white"
+                  className="w-full p-4 border-b-2 border-gray-300 focus:border-green-500 text-black"
                   required
                 />
                 <button

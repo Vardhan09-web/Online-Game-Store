@@ -125,7 +125,7 @@ export default function Navbar() {
       {isUserMenuOpen && (
         <div className="absolute top-20 right-6 bg-gray-800 text-white p-4 rounded-lg shadow-lg w-48 z-50">
           <h2 className="text-lg font-bold">User Menu</h2>
-          <Link to="/profile" className="block mt-2 text-blue-500 hover:text-blue-400">Profile</Link>
+          <Link to="#" className="block mt-2 text-blue-500 hover:text-blue-400">Profile</Link>
           <Link to="/login" className="block mt-2 text-blue-500 hover:text-blue-400" onClick={() => alert('Logging out')}>LogOut</Link>
           {/* <button className="block mt-2 text-red-500 hover:text-red-400" onClick={() => alert('Logging out')}>
             Logout
